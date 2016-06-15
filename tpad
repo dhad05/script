@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+# turn on/off touchpad 
+$s=`synclient -l | grep TouchpadOff`;
+($s)=$s=~m/\d/g;
+$s=1-$s;
+system("synclient TouchpadOff=$s");

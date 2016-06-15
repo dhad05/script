@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#date=~/Pictures/screenshot/$(date +%s).jpg
+#import -window root $date
+#unset date
+
+scrot -e 'mv $f ~/Pictures/screenshot/'

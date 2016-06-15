@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+for i 
+do
+	if [[ -d $i ]]; then
+		echo "Compressing $i"
+		tar -cf "arcver_$i.tar" $i
+		xz -zev "arcver_$i.tar"
+	fi
+done

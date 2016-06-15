@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+# lauch vim from terminal
+xterm -e "bash -c \". ~/.bashrc;title \"Vim\"; vim \"$@\"\"" &

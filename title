@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# set title of a bash shell emulator
+#($id) = `xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)'`=~m/0x[0-9a-f]*/g;
+#`xwit -id "$id" -name "$ARGV[0]"`;
+xwit -id $WINDOWID -name "$1"

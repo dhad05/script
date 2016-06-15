@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+# broken script
+use Term::ANSIColor;
+my @f;
+for $s (@ARGV) {
+	push(@f, split(/\n/,`ls -d $s`));
+}
+
+for $s (@f) {
+	print STDERR color('green'), "$s:\n", color('reset');
+	$file = `cat $s`;
+	$i = 1;
+	for $line (split(/\n/,$file)) {
+		print color('magenta'), $i, color('reset'), " $line\n";
+		$i++;
+	}
+}
